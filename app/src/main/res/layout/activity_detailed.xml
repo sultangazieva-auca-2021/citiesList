@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".DetailedActivity" >
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="30dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/city_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    </androidx.viewpager.widget.ViewPager>
+
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        app:ci_drawable="@color/blue"
+        app:ci_drawable_unselected="@color/coral"
+        app:layout_constraintBottom_toTopOf="@+id/city_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_pager" />
+
+    <ImageView
+        android:id="@+id/arrow_back"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@drawable/arrow_back2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_pager"
+        app:layout_constraintTop_toTopOf="@id/view_pager"
+        app:layout_constraintBottom_toBottomOf="@id/view_pager" />
+
+    <ImageView
+        android:id="@+id/arrow_next"
+        android:layout_width="40dp"
+        android:layout_height="50dp"
+        android:src="@drawable/arrow_forward"
+        app:layout_constraintStart_toEndOf="@id/view_pager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_pager"
+        app:layout_constraintBottom_toBottomOf="@id/view_pager" />
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Paris"
+        android:textColor="@color/coral"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/linTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_pager" />
+
+    <LinearLayout
+        android:id="@+id/linTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:weightSum="1"
+        app:layout_constraintTop_toBottomOf="@id/city_name" >
+
+        <TextView
+            android:id="@+id/time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="0.5"
+            android:fontFamily="monospace"
+            android:text="Time"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/time_itself"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="60 min"
+            android:layout_weight="0.5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weather"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="1"
+        app:layout_constraintTop_toBottomOf="@id/linTime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <TextView
+            android:id="@+id/weather_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_weight="0.5"
+            android:fontFamily="monospace"
+            android:text="Temperature"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/weather_itself"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:textSize="20sp"
+            android:text="45"
+            android:layout_weight="0.5" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/celsius" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/desc_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Invite friends"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/rv_weather_by_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weather" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_weather_by_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/desc_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

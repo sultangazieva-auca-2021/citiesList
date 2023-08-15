@@ -1,3 +1,100 @@
 <resources>
-    <string name="app_name">worldCitiesList</string>
+    <string name="app_name">module17_reList</string>
+    <string name="paris_string"><u>Paris</u></string>
+    <string name="time_string">Time</string>
+    <string name="weather_string">Weather</string>
+    <string name="ex_string">Some desc</string>
+    <string name="city_tour_corp">City Tour Corp</string>
+
+    <string-array name="cities_names">
+        <item>New York</item>
+        <item>London</item>
+        <item>Paris</item>
+        <item>Tokyo</item>
+        <item>Rome</item>
+        <item>Barcelona</item>
+        <item>Sydney</item>
+        <item>Dubai</item>
+        <item>Los Angeles</item>
+        <item>Amsterdam</item>
+        <item>Moscow</item>
+        <item>Beijing</item>
+        <item>Berlin</item>
+        <item>Singapore</item>
+        <item>Istanbul</item>
+        <item>Mumbai</item>
+        <item>Rio de Janeiro</item>
+        <item>Cairo</item>
+        <item>Prague</item>
+        <item>Toronto</item>
+    </string-array>
+
+    <string-array name="curr_weather">
+        <item>40</item>
+        <item>35</item>
+        <item>37</item>
+        <item>24</item>
+        <item>20</item>
+        <item>39</item>
+        <item>24</item>
+        <item>22</item>
+        <item>25</item>
+        <item>30</item>
+        <item>32</item>
+        <item>29</item>
+        <item>34</item>
+        <item>40</item>
+        <item>24</item>
+        <item>20</item>
+        <item>40</item>
+        <item>35</item>
+        <item>40</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="curr_time">
+        <item>1:40 PM</item>
+        <item>7:34 AM</item>
+        <item>2:53 PM</item>
+        <item>1:22 PM</item>
+        <item>5:32 PM</item>
+        <item>8:43 AM</item>
+        <item>1:15 PM</item>
+        <item>6:37 PM</item>
+        <item>0:01 AM</item>
+        <item>3:51 PM</item>
+        <item>2:42 AM</item>
+        <item>4:24 PM</item>
+        <item>9:14 PM</item>
+        <item>10:00 AM</item>
+        <item>11:12 PM</item>
+        <item>3:42 AM</item>
+        <item>8:33 PM</item>
+        <item>8:14 AM</item>
+        <item>4:04 PM</item>
+        <item>3:55 AM</item>
+    </string-array>
+
+    <string-array name="description">
+        <item>It is New York</item>
+        <item>It is London</item>
+        <item>It is Paris</item>
+        <item>It is Tokyo</item>
+        <item>It is Rome</item>
+        <item>It is Barcelona</item>
+        <item>It is Sydney</item>
+        <item>It is Dubai</item>
+        <item>It is Los Angeles</item>
+        <item>It is Amsterdam</item>
+        <item>It is Moscow</item>
+        <item>It is Beijing</item>
+        <item>It is Berlin</item>
+        <item>It is Singapore</item>
+        <item>It is Istanbul</item>
+        <item>It is Mumbai</item>
+        <item>It is Rio de Janeiro</item>
+        <item>It is Cairo</item>
+        <item>It is Prague</item>
+        <item>It is Toronto</item>
+    </string-array>
 </resources>
